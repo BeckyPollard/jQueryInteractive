@@ -1,0 +1,11 @@
+$white: #F6F6F6;
+$acc: #F5D653;
+$acc2: #EEA9FF;
+$base: #3BA2FF;
+$baseL: lighten($base, 25%);
+$baseD: darken($base, 25%);
+
+body, .toolBar {
+    background: $white;
+}
+    
