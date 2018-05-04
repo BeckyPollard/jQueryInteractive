@@ -12,21 +12,20 @@
 }
 
 .computer {
-    //STRUCTURE
     height: 65vh;
     position: relative;
-    margin: 75px auto; //TYPOGRAPHY
+    margin: 75px auto;
     font-family: $VT323;
-    font-size: 20px; //APPEARANCE
+    font-size: 20px;
     background: $baseL;
     box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     .window {
         background: $white;
         border: solid 2px $base;
         z-index: 5;
         position: absolute;
         margin-bottom: 40px;
-        //display: none;
         .appToolBar {
             width: 100%;
             line-height: 40px;
@@ -46,6 +45,7 @@
         height: 350px;
         top: 20px;
         left: 20px;
+        display: none;
         textarea {
             border: none;
             resize: none;
@@ -56,6 +56,47 @@
             color: $baseD;
         }
     }
+    
+    .musicWindow {
+        width: 20%;
+        min-width: 150px; 
+        top: 20px;
+        left: calc(50% - 175px);
+        .musicView {
+            text-align: center;
+            margin: 20px 0;
+            .musicAlbum {
+                img {
+                    margin: 0 auto;
+                    width: 50%;
+                    border: solid 2px $base;
+                }
+            }
+            .musicInfo {
+                p {
+                    &:last-of-type {
+                        font-size: .65em;
+                        color: $base;
+                        line-height: 5px;
+                    }
+                }
+            }
+            .musicControlls {
+                margin-top: 20px;
+                div {
+                    display: inline-block;
+                    padding: 0 10px;
+                    svg {
+                        cursor: pointer;
+                        &:hover {
+                            color: $base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     .desktop {
         padding: 20px;
         .icons {
@@ -73,7 +114,6 @@
             }
         }
     }
-
     .toolBar {
         position: absolute;
         bottom: 0;

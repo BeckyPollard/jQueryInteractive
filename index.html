@@ -21,12 +21,29 @@
         <!--APPLICATIONS-->
         <!--NOTEPAD-->
         <form class="window notepadWindow dragWindow">
-            <div class="appToolBar clear"><i class="fas fa-times close"></i><i class="fas fa-save save"></i></div>
+            <div class="appToolBar clear"><i class="fas fa-times close notepadClose"></i><i class="fas fa-save save"></i></div>
             <textarea class="notepadTextArea"></textarea>
         </form>
-
-       
-       
+        <!--MUSIC-->
+        <div class="window musicWindow dragWindow">
+            <div class="appToolBar clear"><i class="fas fa-times close"></i></div>
+            <div class="musicView">
+                <div class="musicAlbum">
+                    <img src="https://placebear.com/200/200" alt="PLACEHOLDER">
+                </div>
+                <div class="musicInfo">
+                    <p>SONG TITLE</p>
+                    <p>ARTIST</p>
+                </div>
+                <div class="musicControlls">
+                    <div class="musicControllsPrevious"><i class="fas fa-step-backward"></i></div>
+                    <div class="musicControllsPlay"><i class="fas fa-play"></i></div>
+                    <div class="musicControllsForward"><i class="fas fa-step-forward"></i></div>
+                </div>
+            </div>
+        
+        </div>
+        
        
        
        
@@ -43,7 +60,7 @@
                 <li><i class="fas fa-star"></i></li>
                 <li><i class="fas fa-cog"></i></li>
             </ul>
-            <div class="clock"></div>
+            <div class="clock">X:XXPM</div>
         </div>
 
     </main>

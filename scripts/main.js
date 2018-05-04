@@ -2,7 +2,7 @@
 let desktop = {};
 //██████████ DRAG FUNCTIONALITY ██████████
 desktop.drag = function(){
-    $('.dragWindow').draggable({ containment: ".computer", scroll: false, handle: ".appToolBar" });
+    $('.dragWindow').draggable({ containment: ".computer", scroll: false, handle: ".appToolBar", stack: ".window"});
     $('.dragIcon').draggable({ containment: ".computer", scroll: false});
     $('.trashIcon').droppable({
         drop: function(event, ui) {
@@ -20,6 +20,9 @@ desktop.window = function(){
     $('.notepadIcon').dblclick(function(){
         $('.notepadWindow').show().find("textarea").focus();
     })
+    $('.musicIcon').dblclick(function(){
+        $('.musicWindow').show();
+    })
 }
 //██████████ NOTEPAD ██████████
 //NOTEPAD WINDOW SETUP
@@ -27,13 +30,24 @@ desktop.notepad = function(){
     let notepadText = 'TEST';
 //2.POPULATE TEXTAREA WITH STRING STORED IN NOTEPAD VARIABLE
     $('.notepadTextArea').val(`${notepadText}`);
-    console.log(notepadText);
+    console.log(`STARTING STRING: ${notepadText}`);
 //3.PRESS SAVE TO SAVE TEXTAREA TO NOTEPAD VARIABLE (OVERWRITE)
-    $('.notepadWindow.appToolBar.save').click(function(){
-        console.log('SAVE SAVE SAAAAVE');
-    })
-//4.PRESS X TO CLEAR TEXT AND HIDE .memo
+    //TODO: RESOLVE SCOPE ISSUE FOR CLOSING WINDOW
+    $('.save').click(function(){
+        notepadText = $('.notepadTextArea').val();
+        console.log(`SAVED: ${notepadText}`);
+    });
+    $('.notepadClose').click(function(){
+            $('.notepadTextArea').val(`${notepadText}`);
+            console.log(`WINDOW CLOSED, SAVED STRING INSERTED: "${notepadText}"`);
+        });
+    
 }
+//██████████ MUSIC APP ██████████
+//MUSIC WINDOW SETUP
+
+//
+
 //██████████ INIT SETUP ██████████
 desktop.init = function(){
     desktop.window();
