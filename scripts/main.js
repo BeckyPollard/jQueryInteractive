@@ -12,9 +12,11 @@ desktop.drag = function(){
 };
 //██████████ WINDOWS ██████████
 desktop.window = function(){
+    console.log('CLOSE FUNCTION LOADED')
     //CLOSE WINDOWS (POSSIBLY CLOSES ONLY ONE WINDOW?? 05-03-2:54PM)
     $('.close').click(function(){
         $(this).closest(".window").hide();
+        console.log('HEHHEHEHE')
     })
     //DBLCLICK ICONS
     $('.notepadIcon').dblclick(function(){
@@ -24,6 +26,16 @@ desktop.window = function(){
         $('.musicWindow').show();
     })
 }
+//██████████ TOOLBAR CLOCK ██████████
+//desktop.toolbarClock = function(){
+//    let toolbarClockTime = new Date();
+//    $('.clock').text(`${toolbarClockTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`);
+//}
+desktop.toolbarClock = function update(){
+        $('.clock').html(moment().format(`h:mm:ss A`));
+setInterval(update, 1000);
+}
+
 //██████████ NOTEPAD ██████████
 //NOTEPAD WINDOW SETUP
 desktop.notepad = function(){
@@ -53,6 +65,7 @@ desktop.init = function(){
     desktop.window();
     desktop.drag();
     desktop.notepad();
+    
 }
 //██████████ INITIALIZE ██████████
 $(function(){

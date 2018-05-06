@@ -12,7 +12,8 @@
 }
 
 .computer {
-    height: 65vh;
+    height: 84vh;
+    max-height: 750px;
     position: relative;
     margin: 75px auto;
     font-family: $VT323;
@@ -31,13 +32,19 @@
             line-height: 40px;
             background: $base;
             padding: 0 10px;
-            .close, .save {
-                color: $white;
-                margin-right: 10px;
-                &:hover {
-                    color: $acc;
-                }
+            color: $white;
+            p {
+                font-size: .8em;
+                cursor: default;
+                color: $baseL;
             }
+            .close, .save {
+                margin-right: 10px;
+                cursor: pointer;
+                    &:hover {
+                        color: $acc;
+                    }
+                }
         }
     }
     .notepadWindow {
@@ -56,6 +63,10 @@
             color: $baseD;
         }
     }
+    
+    
+    
+    
     
     .musicWindow {
         width: 20%;
@@ -96,6 +107,11 @@
             }
         }
     }
+    
+    
+    
+    
+    
     
     .desktop {
         padding: 20px;
