@@ -16,7 +16,7 @@ desktop.window = function(){
     //CLOSE WINDOWS (POSSIBLY CLOSES ONLY ONE WINDOW?? 05-03-2:54PM)
     $('.close').click(function(){
         $(this).closest(".window").hide();
-        console.log('HEHHEHEHE')
+        console.log('CLOSED');
     })
     //DBLCLICK ICONS
     $('.notepadIcon').dblclick(function(){

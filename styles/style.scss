@@ -26,25 +26,22 @@
         border: solid 2px $base;
         z-index: 5;
         position: absolute;
-        margin-bottom: 40px;
         .appToolBar {
             width: 100%;
             line-height: 40px;
             background: $base;
             padding: 0 10px;
             color: $white;
-            p {
-                font-size: .8em;
-                cursor: default;
-                color: $baseL;
-            }
-            .close, .save {
-                margin-right: 10px;
-                cursor: pointer;
-                    &:hover {
-                        color: $acc;
-                    }
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    cursor: pointer;
+                        &:hover {
+                            color: $acc;
+                        }
                 }
+            }
         }
     }
     .notepadWindow {
@@ -52,7 +49,6 @@
         height: 350px;
         top: 20px;
         left: 20px;
-        display: none;
         textarea {
             border: none;
             resize: none;
@@ -75,7 +71,7 @@
         left: calc(50% - 175px);
         .musicView {
             text-align: center;
-            margin: 20px 0;
+            margin-top: 20px;
             .musicAlbum {
                 img {
                     margin: 0 auto;
@@ -86,7 +82,7 @@
             .musicInfo {
                 p {
                     &:last-of-type {
-                        font-size: .65em;
+                        font-size: .8em;
                         color: $base;
                         line-height: 5px;
                     }
@@ -102,6 +98,20 @@
                         &:hover {
                             color: $base;
                         }
+                    }
+                }
+            }
+            .musicLibrary {
+                margin-top: 20px;
+                font-size: .8em;
+                max-height: 95px;
+                overflow: scroll;
+                border-top: solid 1px $baseL;
+                ul {
+                    li {
+                        width: 100%;
+                        border-bottom: solid 1px $baseL;
+                        padding: 5px 0;
                     }
                 }
             }
