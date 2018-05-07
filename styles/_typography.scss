@@ -1,5 +1,36 @@
+//FONTS
+$VT323: 'VT323', monospace;
+
+//FONT SIZES
+$lvl1: 20px;
+$lvl2: .8em;
+$lvl3: .65em;
+
+//HEADINGS
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+h2 {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+//TYPOGRAPHY
 body {
     color: $baseD;
 }
-
-$VT323: 'VT323', monospace;
+.projectInfo {
+    font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 50px;
+    p {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+}
