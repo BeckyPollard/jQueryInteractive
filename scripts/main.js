@@ -13,7 +13,7 @@ desktop.drag = function(){
 //██████████ WINDOWS ██████████
 desktop.window = function(){
     //CLOSE WINDOWS (POSSIBLY CLOSES ONLY ONE WINDOW?? 05-03-2:54PM)
-    $('.close').click(function(){
+    $('.close').on('click touchstart', function(){
         $(this).closest(".window").hide();
         music.pause();
         music.currentTime = 0;
@@ -44,10 +44,10 @@ desktop.notepad = function(){
     $('.notepadTextArea').val(`${notepadText}`);
 //3.PRESS SAVE TO SAVE TEXTAREA TO NOTEPAD VARIABLE (OVERWRITE)
     //TODO: RESOLVE SCOPE ISSUE FOR CLOSING WINDOW
-    $('.save').click(function(){
+    $('.save').on('click touchstart', function(){
         notepadText = $('.notepadTextArea').val();
     });
-    $('.notepadClose').click(function(){
+    $('.notepadClose').on('click touchstart', function(){
             $('.notepadTextArea').val(`${notepadText}`);
         });
 //4.IF ICON IS TRASHED, KILL WINDOW
@@ -61,13 +61,13 @@ desktop.musicPlayer = function(){
     //1.SETUP MUSIC CONTROLLS
     $music = $('audio');
     music = $music[0];
-    $('.musicControllsPlay').click(function(){
+    $('.musicControllsPlay').on('click touchstart', function(){
         music.play();
     });
-    $('.musicControllsPause').click(function(){
+    $('.musicControllsPause').on('click touchstart', function(){
         music.pause();
     });
-    $('.musicControllsStop').click(function(){
+    $('.musicControllsStop').on('click touchstart', function(){
         music.pause();
         music.currentTime = 0;
     });
@@ -111,7 +111,7 @@ desktop.musicPlayer = function(){
     $('.musicLibrary').append(`<li class="${musicLibrary.sistersofmercy.class}">${musicLibrary.sistersofmercy.title} - ${musicLibrary.sistersofmercy.artist}</li>`);
     $('.musicLibrary').append(`<li class="${musicLibrary.styx.class}">${musicLibrary.styx.title} - ${musicLibrary.styx.artist}</li>`);
     //3.ASSIGN LIBRARY FUNCTIONALITY, REPLACE AUDIO WITH LINK WHEN CLICKED AND PLAY SONG
-    $('.hwab').click(function(){
+    $('.hwab').on('click touchstart', function(){
         $('.musicAlbumArt').attr("src", `images/${musicLibrary.hawkwind.album}`);
         $('.musicTitle').text(`${musicLibrary.hawkwind.title}`);
         $('.musicArtist').text(`${musicLibrary.hawkwind.artist}`);
@@ -119,7 +119,7 @@ desktop.musicPlayer = function(){
         music.pause();
         music.play();
     });
-    $('.somlmr').click(function(){
+    $('.somlmr').on('click touchstart', function(){
         $('.musicAlbumArt').attr("src", `images/${musicLibrary.sistersofmercy.album}`);
         $('.musicTitle').text(`${musicLibrary.sistersofmercy.title}`);
         $('.musicArtist').text(`${musicLibrary.sistersofmercy.artist}`);
@@ -127,7 +127,7 @@ desktop.musicPlayer = function(){
         music.pause();
         music.play();
     });
-    $('.fosir').click(function(){
+    $('.fosir').on('click touchstart', function(){
         $('.musicAlbumArt').attr("src", `images/${musicLibrary.flockofseagulls.album}`);
         $('.musicTitle').text(`${musicLibrary.flockofseagulls.title}`);
         $('.musicArtist').text(`${musicLibrary.flockofseagulls.artist}`);
@@ -135,7 +135,7 @@ desktop.musicPlayer = function(){
         music.pause();
         music.play();
     });
-    $('.smr').click(function(){
+    $('.smr').on('click touchstart', function(){
         $('.musicAlbumArt').attr("src", `images/${musicLibrary.styx.album}`);
         $('.musicTitle').text(`${musicLibrary.styx.title}`);
         $('.musicArtist').text(`${musicLibrary.styx.artist}`);
