@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/*██████████ GLOBAL ██████████*/
+/*░░░░░ NORMALIZE ░░░░░*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*░░░░░ CLEARFIX ░░░░░*/
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+/*░░░░░ LAYOUT ░░░░░*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+audio {
+  display: none; }
+
+body, .toolBar {
+  background: #F6F6F6; }
+
+h1, h2 {
+  text-align: center; }
+
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 40px; }
+
+h2 {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 20px; }
+
+body {
+  color: #0062bb; }
+
+p {
+  line-height: 1.6; }
+
+.projectInfo {
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
+
+a {
+  text-decoration: none;
+  color: #3BA2FF; }
+  a:hover {
+    text-decoration: underline; }
+
+@-webkit-keyframes createWindow {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes createWindow {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1160px;
+  width: calc(100vw - 40px); }
+
+.innerWrapper {
+  max-width: 700px;
+  margin: 0 auto; }
+
+.computer {
+  height: 75vh;
+  max-height: 650px;
+  position: relative;
+  margin: 50px auto;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  background: #bbdeff;
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-animation: createWindow 1.75s;
+  animation: createWindow 1.75s; }
+  .computer .window {
+    background: #F6F6F6;
+    border: solid 2px #3BA2FF;
+    z-index: 5;
+    position: absolute;
+    display: none; }
+    .computer .window .appToolBar {
+      width: 100%;
+      line-height: 40px;
+      background: #3BA2FF;
+      padding: 0 10px;
+      color: #F6F6F6; }
+      .computer .window .appToolBar ul li {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer; }
+        .computer .window .appToolBar ul li:hover {
+          color: #F5D653; }
+  .computer .notepadWindow {
+    width: 22%;
+    min-width: 175px;
+    height: 350px;
+    top: 20px;
+    left: 20px; }
+    .computer .notepadWindow textarea {
+      border: none;
+      resize: none;
+      background: #F6F6F6;
+      padding: 0 10px 5px 10px;
+      height: calc(100% - 40px);
+      width: 100%;
+      color: #0062bb; }
+  .computer .musicWindow {
+    width: 30%;
+    min-width: 150px;
+    top: 20px;
+    left: calc(50% - 175px); }
+    .computer .musicWindow .musicView {
+      text-align: center;
+      margin-top: 20px; }
+      .computer .musicWindow .musicView .musicAlbum img {
+        margin: 0 auto;
+        width: 50%;
+        border: solid 2px #3BA2FF; }
+      .computer .musicWindow .musicView .musicInfo p:last-of-type {
+        font-size: 0.65em;
+        color: #3BA2FF;
+        line-height: 5px; }
+      .computer .musicWindow .musicView .musicControlls {
+        margin-top: 20px; }
+        .computer .musicWindow .musicView .musicControlls li {
+          display: inline-block;
+          padding: 0 5px; }
+          .computer .musicWindow .musicView .musicControlls li svg {
+            cursor: pointer; }
+            .computer .musicWindow .musicView .musicControlls li svg:hover {
+              color: #3BA2FF; }
+      .computer .musicWindow .musicView .musicLibrary {
+        margin-top: 20px;
+        font-size: 0.65em;
+        max-height: 85px;
+        overflow-y: scroll;
+        border-top: solid 1px #bbdeff; }
+        .computer .musicWindow .musicView .musicLibrary li {
+          text-align: left;
+          width: 100%;
+          border-bottom: solid 1px #bbdeff;
+          padding: 5px 10px;
+          cursor: pointer;
+          overflow: hidden; }
+          .computer .musicWindow .musicView .musicLibrary li:hover {
+            background: #bbdeff; }
+  .computer .desktop {
+    padding: 20px; }
+    .computer .desktop .icons {
+      float: right;
+      text-align: center;
+      max-width: 60px;
+      color: #F6F6F6; }
+      .computer .desktop .icons li {
+        line-height: 30px;
+        margin-bottom: 20px;
+        cursor: pointer; }
+        .computer .desktop .icons li svg {
+          font-size: 48px; }
+  .computer .toolBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 40px;
+    z-index: 10;
+    color: #3BA2FF; }
+    .computer .toolBar .menu {
+      float: left; }
+      .computer .toolBar .menu li {
+        display: inline-block;
+        margin-right: 15px;
+        cursor: pointer; }
+        .computer .toolBar .menu li:first-of-type {
+          color: #F5D653; }
+    .computer .toolBar .clock {
+      float: right; }
+
+.projectInfo {
+  border-left: solid 1px #bbdeff;
+  border-right: solid 1px #bbdeff;
+  padding: 0 20px;
+  margin-bottom: 50px; }
+  .projectInfo .projectDesc {
+    border-bottom: solid 1px #bbdeff;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
+    .projectInfo .projectDesc .twitterIcon a {
+      text-decoration: none;
+      color: #3BA2FF;
+      display: block; }
+  .projectInfo .share {
+    margin-bottom: 10px; }
