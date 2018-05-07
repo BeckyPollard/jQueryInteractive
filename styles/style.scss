@@ -15,6 +15,7 @@
     max-width: 700px;
     margin: 0 auto;
 }
+/*██████████ COMPUTER ██████████*/
 .computer {
     height: 75vh;
     max-height: 650px;
@@ -50,12 +51,14 @@
             }
         }
     }
+/*██████████ NOTEPAD ██████████*/
     .notepadWindow {
         width: 22%;
         min-width: 175px;
         height: 350px;
         top: 20px;
         left: 20px;
+        left: (10%);
         textarea {
             border: none;
             resize: none;
@@ -66,16 +69,12 @@
             color: $baseD;
         }
     }
-    
-    
-    
-    
-    
+/*██████████ MUSIC ██████████*/
     .musicWindow {
         width: 30%;
         min-width: 150px; 
-        top: 20px;
-        left: calc(50% - 175px);
+        top: 50px;
+        left: 25%;
         .musicView {
             text-align: center;
             margin-top: 20px;
@@ -128,12 +127,7 @@
             }
         }
     }
-    
-    
-    
-    
-    
-    
+/*██████████ DESKTOP ██████████*/
     .desktop {
         padding: 20px;
         .icons {
@@ -176,6 +170,7 @@
         }
     }
 }
+/*██████████ PROJECT INFO ██████████*/
 .projectInfo {
     border-left: solid 1px $baseL;
     border-right: solid 1px $baseL;
@@ -197,3 +192,5 @@
                 margin-bottom: 10px;
             }
 }
+/*██████████ RESPONSIVE ██████████*/
+@import "responsive";
