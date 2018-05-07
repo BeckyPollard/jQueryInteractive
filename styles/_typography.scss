@@ -18,19 +18,16 @@ h1 {
 h2 {
     font-weight: 300;
     font-size: 22px;
-    line-height: 22px;
     margin-bottom: 20px;
 }
 //TYPOGRAPHY
 body {
     color: $baseD;
 }
+p {
+    line-height: 1.6;
+}
 .projectInfo {
     font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    margin-bottom: 50px;
-    p {
-        max-width: 75%;
-        margin: 0 auto;
-    }
 }

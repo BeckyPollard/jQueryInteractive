@@ -3,7 +3,7 @@ const desktop = {};
 //██████████ DRAG FUNCTIONALITY ██████████
 desktop.drag = function(){
     $('.dragWindow').draggable({ containment: ".computer", scroll: false, handle: ".appToolBar", stack: ".window"});
-    $('.dragIcon').draggable({ containment: ".computer", scroll: false});
+    $('.dragIcon').draggable({ containment: ".computer", scroll: false, revert: true});
     $('.trashIcon').droppable({
         drop: function(event, ui) {
             ui.draggable.remove();

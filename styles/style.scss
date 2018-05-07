@@ -4,13 +4,17 @@
 @import "colours";
 @import "typography";
 @import "links";
+@import "animation";
 
 .wrapper {
     margin: 0 auto;
     max-width: 1160px;
     width: calc(100vw - 40px);
 }
-
+.innerWrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
 .computer {
     height: 75vh;
     max-height: 650px;
@@ -19,13 +23,15 @@
     font-family: $VT323;
     font-size: $lvl1;
     background: $baseL;
-    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    animation: createWindow 1.75s;
     .window {
         background: $white;
         border: solid 2px $base;
         z-index: 5;
         position: absolute;
+        display: none;
         .appToolBar {
             width: 100%;
             line-height: 40px;
@@ -173,10 +179,21 @@
 .projectInfo {
     border-left: solid 1px $baseL;
     border-right: solid 1px $baseL;
-    .twitter-share-button {
-        
+    padding: 0 20px;
+    margin-bottom: 50px;
+    .projectDesc {
+        border-bottom: solid 1px $baseL;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        .twitterIcon {
+            a {
+                text-decoration: none;
+                color: $base;
+                display: block;
+            }
+        }
     }
-    p {
-        
-    }
+    .share {
+                margin-bottom: 10px;
+            }
 }
