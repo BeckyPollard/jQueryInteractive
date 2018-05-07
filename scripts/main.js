@@ -14,7 +14,7 @@ desktop.drag = function(){
 desktop.window = function(){
     //CLOSE WINDOWS (POSSIBLY CLOSES ONLY ONE WINDOW?? 05-03-2:54PM)
     $('.close').on('click touchstart', function(){
-        $(this).closest(".window").hide();
+        $(this).closest(".window").fadeOut(200);
         music.pause();
         music.currentTime = 0;
     })
