@@ -259,7 +259,11 @@ a {
     width: 30%;
     min-width: 150px;
     top: 50px;
+<<<<<<< HEAD
     right: 50px; }
+=======
+    left: 25%; }
+>>>>>>> 77ea7742f70a70e7aa65c0fc9f8c0075d524734d
     .computer .musicWindow .musicView {
       text-align: center;
       margin-top: 20px; }
